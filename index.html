@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
@@ -10,7 +10,7 @@
 <aside class="sidebar">
   <a class="brand" href="#"><span class="brand-icon">✳</span><span><strong>جمله‌نگار</strong><small>دفتر یادگیری انگلیسی</small></span></a>
   <div class="nav-label">فضای یادگیری</div>
-  <nav><button class="nav-item active" data-page="collection"><span>▧</span> جملات من <i>01</i></button><button class="nav-item" data-page="practice"><span>✎</span> تمرین نوشتن <i>02</i></button></nav>
+  <nav><button class="nav-item active" data-page="collection"><span>▧</span> جملات من <i>01</i></button><button class="nav-item" data-page="practice"><span>✎</span> تمرین نوشتن <i>02</i></button><button class="nav-item" data-page="knowledge"><span>✧</span> واژگان و الگوها <i>03</i></button></nav>
   <div class="sidebar-note"><div class="spark">✦</div><strong>هر جمله، یک قدم جلوتر</strong><p>چیزهایی که یاد می‌گیری را همین‌جا نگه دار و به مرور برگرد.</p></div>
   <div class="sidebar-footer"><span class="status-dot"></span> اطلاعات در همین مرورگر ذخیره می‌شود</div>
 </aside>
@@ -29,6 +29,7 @@
   <div class="workflow"><div class="workflow-intro"><div class="workflow-icon">✧</div><div><span class="section-number">همراه با هوش مصنوعی</span><h2>وقت بازخورد گرفتن است</h2><p>جمله‌ها را همراه با دستورالعمل کپی کن، به ابزار هوش مصنوعی بده و پاسخ JSON را اینجا وارد کن.</p></div></div><div class="workflow-actions"><button class="outline" id="export-btn">⤴ <span>کپی درخواست برای هوش مصنوعی</span></button><button class="dark" id="import-toggle">⤵ <span>وارد کردن پاسخ JSON</span></button></div><div class="import-panel" id="import-panel" hidden><label for="json-input">پاسخ JSON را اینجا قرار بده</label><textarea id="json-input" dir="ltr" placeholder='{ "corrections": [ ... ] }'></textarea><div class="import-bottom"><span>اصلاحات با شناسه هر جمله به آن اضافه می‌شوند.</span><button class="primary" id="import-btn">ثبت اصلاحات <span>←</span></button></div><p class="error" id="import-error" role="alert"></p></div></div>
   <div class="list-head"><div><span class="section-number">دفتر تمرین</span><h2>جمله‌های من <span class="count" id="practice-count">۰</span></h2></div><div class="search-wrap"><span>⌕</span><input id="practice-search" placeholder="جستجو در جمله‌ها..." aria-label="جستجو در تمرین‌ها"></div></div><div class="cards" id="practice-list"></div>
 </section>
+<section class="page" id="knowledge-page"><div class="heading"><div><div class="eyebrow"><span></span> دفتر واژگان و الگوها</div><h1>بیشتر کشف کن، <em>بهتر یاد بگیر.</em></h1><p>واژگان، معنی‌های گوناگون و الگوهای جمله را با کمک هوش مصنوعی به دفترت اضافه کن.</p></div><div class="heading-art pencil">✧<span>✳</span></div></div><div class="workflow"><div class="workflow-intro"><div class="workflow-icon">✧</div><div><span class="section-number">همراه با هوش مصنوعی</span><h2>اطلاعات تازه بگیر</h2><p>واژه‌ها، موضوع یا جمله‌های مورد نظرت را بنویس. پرامپت را کپی کن و پاسخ JSON را در همین صفحه وارد کن.</p></div></div><label for="knowledge-topic" class="topic-label">چه چیزی می‌خواهی یاد بگیری؟</label><textarea id="knowledge-topic" dir="auto" placeholder="مثلاً: معنی‌های مختلف get و الگوهای کاربرد آن"></textarea><div class="workflow-actions"><button class="outline" id="knowledge-prompt">⤴ کپی پرامپت</button><button class="dark" id="knowledge-toggle">⤵ وارد کردن JSON</button></div><div class="import-panel" id="knowledge-import" hidden><label for="knowledge-json">پاسخ JSON را اینجا قرار بده</label><textarea id="knowledge-json" dir="ltr" placeholder='{ "vocabulary": [], "patterns": [] }'></textarea><div class="import-bottom"><span>معنی‌های جدید به واژه‌های موجود اضافه می‌شوند.</span><button class="primary" id="knowledge-save">بارگذاری اطلاعات <span>←</span></button></div><p class="error" id="knowledge-error" role="alert"></p></div></div><div class="list-head"><div><span class="section-number">آرشیو یادگیری</span><h2>واژگان و الگوها <span class="count" id="knowledge-count">۰</span></h2></div><div class="search-wrap"><span>⌕</span><input id="knowledge-search" placeholder="جستجو..." aria-label="جستجو در واژگان و الگوها"></div></div><div class="cards" id="knowledge-list"></div></section>
 <footer>با حوصله یاد بگیر، با اعتماد به نفس بنویس. <span>✳</span></footer>
 </main></div><div class="toast" id="toast" role="status"></div><script src="app.js"></script>
 </body></html>
